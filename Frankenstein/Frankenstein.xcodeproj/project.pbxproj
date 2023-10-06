@@ -11,7 +11,18 @@
 		CB8352292AD04B3E00FC9E13 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8352282AD04B3E00FC9E13 /* HomeView.swift */; };
 		CB83522B2AD04B4000FC9E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB83522A2AD04B4000FC9E13 /* Assets.xcassets */; };
 		CB83522E2AD04B4000FC9E13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB83522D2AD04B4000FC9E13 /* Preview Assets.xcassets */; };
+		CB83523C2AD052BF00FC9E13 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB83523B2AD052BF00FC9E13 /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB83523D2AD052BF00FC9E13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB83521B2AD04B3E00FC9E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB8352222AD04B3E00FC9E13;
+			remoteInfo = Frankenstein;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CB8352232AD04B3E00FC9E13 /* Frankenstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frankenstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +30,19 @@
 		CB8352282AD04B3E00FC9E13 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CB83522A2AD04B4000FC9E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB83522D2AD04B4000FC9E13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB8352392AD052BF00FC9E13 /* FrankensteinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrankensteinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB83523B2AD052BF00FC9E13 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CB8352202AD04B3E00FC9E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB8352362AD052BF00FC9E13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8352252AD04B3E00FC9E13 /* Frankenstein */,
+				CB83523A2AD052BF00FC9E13 /* FrankensteinTests */,
 				CB8352242AD04B3E00FC9E13 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8352232AD04B3E00FC9E13 /* Frankenstein.app */,
+				CB8352392AD052BF00FC9E13 /* FrankensteinTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CB83523A2AD052BF00FC9E13 /* FrankensteinTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB83523B2AD052BF00FC9E13 /* HomeViewModelTests.swift */,
+			);
+			path = FrankensteinTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +117,24 @@
 			productReference = CB8352232AD04B3E00FC9E13 /* Frankenstein.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CB8352382AD052BF00FC9E13 /* FrankensteinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB83523F2AD052BF00FC9E13 /* Build configuration list for PBXNativeTarget "FrankensteinTests" */;
+			buildPhases = (
+				CB8352352AD052BF00FC9E13 /* Sources */,
+				CB8352362AD052BF00FC9E13 /* Frameworks */,
+				CB8352372AD052BF00FC9E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB83523E2AD052BF00FC9E13 /* PBXTargetDependency */,
+			);
+			name = FrankensteinTests;
+			productName = FrankensteinTests;
+			productReference = CB8352392AD052BF00FC9E13 /* FrankensteinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					CB8352222AD04B3E00FC9E13 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					CB8352382AD052BF00FC9E13 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = CB8352222AD04B3E00FC9E13;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				CB8352222AD04B3E00FC9E13 /* Frankenstein */,
+				CB8352382AD052BF00FC9E13 /* FrankensteinTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +180,13 @@
 			files = (
 				CB83522E2AD04B4000FC9E13 /* Preview Assets.xcassets in Resources */,
 				CB83522B2AD04B4000FC9E13 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB8352372AD052BF00FC9E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB8352352AD052BF00FC9E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB83523C2AD052BF00FC9E13 /* HomeViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB83523E2AD052BF00FC9E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB8352222AD04B3E00FC9E13 /* Frankenstein */;
+			targetProxy = CB83523D2AD052BF00FC9E13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CB83522F2AD04B4000FC9E13 /* Debug */ = {
@@ -320,6 +396,40 @@
 			};
 			name = Release;
 		};
+		CB8352402AD052BF00FC9E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lucca.FrankensteinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Frankenstein.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Frankenstein";
+			};
+			name = Debug;
+		};
+		CB8352412AD052BF00FC9E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lucca.FrankensteinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Frankenstein.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Frankenstein";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -337,6 +447,15 @@
 			buildConfigurations = (
 				CB8352322AD04B4000FC9E13 /* Debug */,
 				CB8352332AD04B4000FC9E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB83523F2AD052BF00FC9E13 /* Build configuration list for PBXNativeTarget "FrankensteinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8352402AD052BF00FC9E13 /* Debug */,
+				CB8352412AD052BF00FC9E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
