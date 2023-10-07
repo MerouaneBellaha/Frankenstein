@@ -5,4 +5,6 @@
 - CI
   - run UT
   - run E2E
+  - swiftlint
+  - swiftgen
   - 
