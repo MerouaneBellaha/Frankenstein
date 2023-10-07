@@ -1,10 +1,12 @@
 # Frankenstein
 
 - use import PowerAssert (#asser())
-- E2E
+- swiftgen
+- localisation
+- sourcery
+- swiftlint
 - CI
   - run UT
   - run E2E
   - swiftlint
-  - swiftgen
-  - localisation
+
