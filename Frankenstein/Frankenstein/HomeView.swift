@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @FocusState private var isFocused: Bool
     @State var viewModel: HomeViewModel
 
     init() {
@@ -20,12 +21,12 @@ struct HomeView: View {
             List {
                 ForEach(viewModel.tasks) { task in
                     Text(task.name)
+                        .accessibilityIdentifier(task.name)
                 }
                 .onDelete(perform: viewModel.deleteTask(atIndex:))
             }
             .scrollContentBackground(.hidden)
             .padding(16)
-
         }
         .background(.blue.opacity(0.1))
 
@@ -35,11 +36,19 @@ struct HomeView: View {
                     .padding(7)
                     .background(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .focused($isFocused)
+                    .submitLabel(.continue)
+                    .onSubmit {
+                        viewModel.addTask(named: viewModel.futureTaskName)
+                    }
+                    .accessibilityIdentifier("task name textField")
 
                 Button("add task") {
                     viewModel.addTask(named: viewModel.futureTaskName)
+                    isFocused = false
                 }
                 .buttonStyle(.bordered)
+                .accessibilityIdentifier("add task button")
             }
             .padding(16)
             .background(.blue.opacity(0.2))
