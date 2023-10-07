@@ -7,4 +7,4 @@
   - run E2E
   - swiftlint
   - swiftgen
-  - 
+  - localisation
