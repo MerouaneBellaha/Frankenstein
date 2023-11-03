@@ -1,5 +1,7 @@
 type_name:
-  min_length: 4 # only warning
+  min_length:
+    warning: 3
+    error: 2
   max_length: # warning and error
     warning: 40
     error: 50

@@ -7,7 +7,6 @@
 
 import XCTest
 
-// comment to trigger workflow
 // final class FrankensteinUITestsLaunchTests: XCTestCase {
 //
 //    override class var runsForEachTargetApplicationUIConfiguration: Bool {
