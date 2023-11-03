@@ -7,7 +7,8 @@
 
 import XCTest
 
-//final class FrankensteinUITestsLaunchTests: XCTestCase {
+// comment to trigger workflow
+// final class FrankensteinUITestsLaunchTests: XCTestCase {
 //
 //    override class var runsForEachTargetApplicationUIConfiguration: Bool {
 //        true
@@ -29,4 +30,4 @@ import XCTest
 //        attachment.lifetime = .keepAlways
 //        add(attachment)
 //    }
-//}
+// }
