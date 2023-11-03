@@ -4,4 +4,4 @@ type_name:
     error: 2
   max_length: # warning and error
     warning: 40
-    error: 50
+    error: 4
