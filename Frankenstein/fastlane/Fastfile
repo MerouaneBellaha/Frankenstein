@@ -25,6 +25,38 @@ platform :ios do
     raise_if_swiftlint_error: true,      # Allow fastlane to raise an error if swiftlint fails
     ignore_exit_status: true    # Allow fastlane to continue even if SwiftLint returns a non-zero exit status
     )
-    # add actions here: https://docs.fastlane.tools/actions
+    
+    parseSwiftlintOutput
   end
+end
+
+def parseSwiftlintOutput 
+  input_text = File.open('../swiftlint.result.json', 'r')
+  result = {
+  "warning" => [],
+  "error" => []
+}
+
+input_text.lines.each do |line|
+  parts = line.match(/^(.*?):(\d+):(\d+): (\w+): (.*)$/)
+  if parts
+    file_info, line_number, _, message_type, message = parts.captures
+    file_parts = file_info.split('/')
+    file_name = File.basename(file_parts[-1], ".swift")
+    
+    entry = {
+    "line" => line_number.to_i,
+    "file" => file_name,
+    "message" => "#{message_type}: #{message}"
+  }
+  
+  if message_type == "warning"
+    result["warning"] << entry
+  elsif message_type == "error"
+    result["error"] << entry
+  end
+end
+end
+
+puts result
 end
