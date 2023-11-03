@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  name: run swiftlint
-  deploy:
+  run-swiftlint:
+    name: Run swiftlint
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
