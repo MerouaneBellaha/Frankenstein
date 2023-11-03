@@ -7,7 +7,7 @@
 
 import XCTest
 
-//final class FrankensteinUITestsLaunchTests: XCTestCase {
+// final class FrankensteinUITestsLaunchTests: XCTestCase {
 //
 //    override class var runsForEachTargetApplicationUIConfiguration: Bool {
 //        true
@@ -29,4 +29,4 @@ import XCTest
 //        attachment.lifetime = .keepAlways
 //        add(attachment)
 //    }
-//}
+// }
