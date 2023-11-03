@@ -1,0 +1,19 @@
+name: run swiftlint
+ 
+on:
+ workflow_dispatch:
+ 
+jobs:
+ deploy:
+   runs-on: macos-latest
+   steps:
+     - uses: actions/checkout@v2
+ 
+     - name: Set up ruby env
+       uses: ruby/setup-ruby@v1.138.0
+       with:
+         ruby-version: 2.7.3
+         bundler-cache: true
+ 
+      - name: run swiftlint
+              run: bundle exec fastlane ios run_swiftlint
