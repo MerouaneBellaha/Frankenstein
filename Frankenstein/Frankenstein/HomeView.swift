@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct  A {}
+struct  AZ {}
 struct HomeView: View {
     @FocusState private var isFocused: Bool
     @State var viewModel: HomeViewModel
